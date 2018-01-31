@@ -11,60 +11,63 @@
     src: url('../fonts/Raleway-Light.ttf');
 }
 
+@font-face {
+    font-family: 'Montserrat-Light';
+    src: url('../fonts/Montserrat-Light.otf');
+}
+
 *{
 	margin: 0;
 	padding: 0;
 }
 
-/*region Header*/
+/*#region Header*/
 
 header{
 	height: 75px;
-	background-color: #894065;
+    background-color: #6d3250;
 }
 
 header > nav {
     float: left;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 header > nav > a {
     float: left;
     font-family: 'Raleway-Light';
-    font-size: 16px;
+    font-size: 13px;
     text-decoration: none;
     color: #ffffff;
-    padding: 28px 40px 12px 8px;
+    margin: 29px 14px 0px 16px;
+    border-radius: 5px;
     text-transform: uppercase;
     letter-spacing: 3px;
-}
-
-#homeLink {
-    padding-left: 35px;
-}
-
-header > nav > a:hover {
-    ...
+    padding: 3px;
 }
 
 header > a {
     float: right;
     color: #ffffff;
-    padding: 25px 10px;
+    padding: 4px;
+    margin-top: 20px;
+    margin-right: 20px;
     font-size: 25px;
+    border-radius: 50%;
 }
 
 header > a:hover {
-    color: #63324b;
+    color: #472335;
     transition-duration: 0.3s;
-}
-
-#GitHubLink{
-    padding-right: 35px;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
 }
 
 /*#endregion Header*/
 
-/*Region Intro*/
+/*#region Intro*/
 
 #introSection {
     background-size: cover;
@@ -73,7 +76,7 @@ header > a:hover {
 #introSection > p {
     text-align: center;
     font-family: 'Raleway-Light';
-    font-size: 33px;
+    font-size: 30px;
     font-weight: 900;
     color: #ffffff;
     padding-top: 250px;
@@ -83,21 +86,21 @@ header > a:hover {
 
 /*#endregion Intro*/
 
-/*Region Services*/
+/*#region Services*/
 
 #servicesSection {
     background-color: #e5dce0;
-    padding-left: 30px;
+    padding: 60px 40px 60px 40px;
 }
 
 #servicesSection > .serviceContent {
     display: inline-block;
+    width: 29.5%;
     color: #635e5e;
-    margin: 100px 30px 100px 30px;
     text-align: center;
     font-family: 'Raleway-Light';
     border-right: 1px solid #635e5e;
-    padding-right: 30px;
+    padding: 0px 20px 0px 20px;
 }
 
 #servicesSection > .serviceContent > i {
@@ -117,10 +120,11 @@ header > a:hover {
 
 #servicesSection > #thirdContent {
     display: inline-block;
+    width: 29.5%;
     color: #635e5e;
-    margin: 80px 30px 80px 30px;
     text-align: center;
     font-family: 'Raleway-Light';
+    padding: 0px 20px 0px 20px;
 }
 
 #servicesSection > #thirdContent > i {
@@ -140,62 +144,57 @@ header > a:hover {
 
 /*#endregion Services*/
 
-/*Region About*/
+/*#region About*/
 
 #aboutSection {
-    height: 369px;
+    padding: 30px;
+    background-size: cover;
 }
 
-#aboutSection > #photoContainer {
-    width: 41%;
-    position: relative;
+#aboutSection > .textContainer {
+    height: 100%;
     float: left;
+    padding-top: 30px;
+    padding-bottom: 60px;
 }
 
-#aboutSection > #photoContainer > #aboutImage {
-    width: 100%;
-}
-
-#aboutSection > #textContainer {
-    width: 59%;
-    float: right;
-}
-
-#aboutSection > #textContainer > h2 {
+#aboutSection > .textContainer > h2 {
     text-align: center;
     font-family: 'Raleway-Light';
     color: #635e5e;
     font-size: 30px;
-    margin-top: 60px;
-    margin-bottom: 35px;
+    padding-bottom: 40px;
     text-transform: uppercase;
 }
 
-#aboutSection > #textContainer > p {
+#aboutSection > .textContainer > p {
     font-family: 'Raleway-Light';
     font-size: 18px;
-    padding-bottom: 84px;
-    padding-left: 90px;
+    text-align: center;
     letter-spacing: 1px;
-    line-height: 25px;
     color: #635e5e;
+    line-height: 26px;
+    padding-left: 30px;
+}
+
+#aboutSection > .portraitImage {
+    max-width: 23%;
+    padding-left: 150px;
 }
 
 /*#endregion About*/
 
-/*Region Projects*/
+/*#region Projects*/
 
 #projectsSection {
     background-color: #e5dce0;
+    padding: 30px 50px 120px 50px;
 }
 
 #projectsSection > #headlineStorage {
     position: relative;
     top: 60px;
-    margin-left: 120px;
-    margin-right: 120px;
-    padding-bottom: 30px;
-    padding-top: 30px;
+    margin: 0px 120px 150px 120px;
     border-top: 2px solid #ffffff;
     border-bottom: 2px solid #ffffff;
 }
@@ -207,27 +206,28 @@ header > a:hover {
     text-transform: uppercase;
     color: #635e5e;
     letter-spacing: 1.5px;
+    padding: 30px;
 }
 
 #projectsSection > .projectContent {
-    width: 25%;
+    width: 30%;
     background-color: #ffffff;
-    margin-top: 120px;
-    margin-left: 80px;
     display: inline-block;
-    margin-bottom: 130px;
+    margin-left: 30px;
 }
 
 #projectsSection > .projectContent > .upperHalf {
     height: 43%;
     background-size: 400px 350px;
+    transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
     -webkit-transition-duration: 0.3s;
-  	transition-duration: 0.3s;
+    background-position: center;
 }
 
 #projectsSection > .projectContent > .upperHalf:hover {
     background-size: 500px 450px;
-
 }
 
 #projectsSection > .projectContent > .upperHalf > h3 {
@@ -245,7 +245,7 @@ header > a:hover {
     font-size: 18px;
     text-align: center;
     margin-top: 25px;
-    padding: 10px 15px 45px 15px;
+    padding: 10px 15px 25px 15px;
     color: #635e5e;
 }
 
@@ -294,11 +294,11 @@ header > a:hover {
 
 /*#endregion Projects*/
 
-/*Redion Footer*/
+/*#region Footer*/
 
 footer {
-    padding: 100px 0 100px 0;
-    background-color: #894065;
+    padding: 100px 40px 100px 40px;
+    background-color: #6d3250;
     text-align: center;
 }
 
@@ -321,9 +321,222 @@ footer > p {
 footer > h4 {
     font-family: 'Raleway-Light';
     font-size: 16px;
-    margin-top: 20px;
+    margin-top: 35px;
     color: #ffffff;
     letter-spacing: 1.5px;
 }
 
+footer > a {
+    color: #ffffff;
+    font-size: 35px;
+    padding: 10px;
+}
+
+footer > a:hover {
+    color: #472335;
+    transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+}
+
 /*#endregion Footer*/
+
+@media screen and (max-width: 1228px){  
+    #servicesSection > #thirdContent {
+        display: block;
+        margin: 0 auto;
+        padding-top: 50px;
+    }
+
+    #servicesSection > .serviceContent {
+        width: 45%;
+    }
+
+    #servicesSection > .serviceContent:nth-child(2) {
+        border: none;
+    } 
+}
+
+@media screen and (max-width: 1133px){
+    #aboutSection > .textContainer {
+        width: 100%;
+        display: block;
+        margin: auto;
+        padding-right: 85px;
+    }
+    
+    #aboutSection > .portraitImage {
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 1096px){ 
+    #projectsSection > .projectContent {
+        width: 45%;
+        padding-bottom: 1px;
+    }
+
+    #projectsSection > .projectContent:nth-child(4) {
+        display: block;
+        margin: 0 auto;
+        margin-top: 70px;
+        padding-bottom: 1px;
+    }
+}
+
+@media screen and (max-width: 947px){  
+    #servicesSection > .serviceContent {
+        width: 44%;
+    }
+}
+
+@media screen and (max-width: 900px){
+    #introSection > p {
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 805px){
+    #servicesSection > .serviceContent {
+        display: block;
+        margin: 0 auto;
+        border: none;
+        width: 100%;
+    }
+
+    #servicesSection > #thirdContent {
+        width: 100%;
+    }
+
+    #servicesSection > .serviceContent:nth-child(2) {
+    margin-top: 50px;
+    }
+
+    #servicesSection > .serviceContent > i {
+        font-size: 40px;
+    }
+    
+    #servicesSection > .serviceContent > h3 {
+        font-size: 25px;
+    }
+    
+    #servicesSection > .serviceContent > p {
+        font-size: 16px;
+    }
+    
+    #servicesSection > #thirdContent > i {
+        font-size: 40px;
+    }
+    
+    #servicesSection > #thirdContent > h3 {
+        font-size: 25px;
+    }
+    
+    #servicesSection > #thirdContent > p {
+        font-size: 16px;
+    }    
+
+    #aboutSection > .portraitImage {
+       max-width: 30%;
+    }
+}
+
+@media screen and (max-width: 756px){
+    #projectsSection > .projectContent {
+        display: block;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    #projectsSection > .projectContent:nth-child(3) {
+        margin-top: 70px;
+    }
+}
+
+@media screen and (max-width: 650px){
+    #introSection > p {
+        font-size: 20px;
+    }
+
+    header > nav {
+        display: none;
+    }
+
+    footer > h1 {
+        font-size: 40px;
+    }
+    
+    footer > p {
+        font-size: 16px;
+    }
+    
+    footer > h4 {
+        font-size: 13px;
+    }
+    
+    footer > a {
+        font-size: 30px;
+    }
+
+    #projectsSection > #headlineStorage {
+        margin: 0px 60px 150px 60px;
+    }
+}
+
+@media screen and (max-width: 550px){
+    footer > h1 {
+        font-size: 35px;
+    }
+    
+    footer > p {
+        font-size: 15px;
+    }
+    
+    footer > h4 {
+        font-size: 10px;
+    }
+    
+    footer > a {
+        font-size: 25px;
+    }
+
+    #projectsSection > .projectContent {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 430px){
+    #introSection > p {
+        font-size: 17px;
+    }
+
+    #projectsSection {
+        padding: 30px 10px 120px 10px;
+    }
+
+    #aboutSection > .portraitImage {
+        max-width: 50%;
+     }
+ }
+}
+
+@media screen and (max-width: 340px){
+    footer > h1 {
+        font-size: 30px;
+    }
+    
+    footer > p {
+        font-size: 13px;
+    }
+
+    footer > a {
+        font-size: 23px;
+    }
+}
+
+
+
+

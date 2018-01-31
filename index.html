@@ -21,52 +21,50 @@
 		<header>
 			<nav>
 				<a href="javascript:;" id="homeLink">Home</a>
-				<a href="javascript:;">About</a>
-				<a href="javascript:;">Work</a>
-				<a href="javascript:;">Contact</a>
+				<a href="javascript:;" id="aboutLink">About</a>
+				<a href="javascript:;" id="projectsLink">Projects</a>
+				<a href="javascript:;" id="contactLink">Contact</a>
 			</nav>
-			<a class="animated" target="_blank" href="#" id="GitHubLink" ><i class="fa fa-github" aria-hidden="true"></i></a>
-			<a class="animated" target="_blank" href="#" ><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+			<a class="animated" target="_blank" href="https://github.com/ondine701" id="GitHubLink"><i class="fa fa-github" aria-hidden="true"></i></a>
+			<a class="animated" target="_blank" href="https://www.linkedin.com/in/anabjelica/" ><i class="fa fa-linkedin" aria-hidden="true"></i></a>
 		</header>
 		
-		<section id="introSection" style="background-image: url('images/backgroundPhoto2.jpg');">
-			<p>Hi, my name is Ana Bjelica. I am a Front End Developer focusing on </br> 
-				Web Development and Rensponsive Web Design. </br> Below are a few services I provide.
+		<section id="introSection" style="background-image: url('images/backgroundPhoto.jpg');">
+			<p>Hi, I am Ana Bjelica. I am a Front End Developer <br/> focusing on
+				Web Development <br/> and Rensponsive Web Design.
 			</p>
 		</section>
 
-		<section id="servicesSection">
-			<div class="serviceContent">
-				<i class="fa fa-magic" aria-hidden="true"></i>
-				<h3>Website design</h3>
-				<p>Each of my designs begins with a </br> blank canvas which allows your </br> content to guide the layout.</p>
-			</div>
-			<div class="serviceContent">
-				<i class="fa fa-cubes" aria-hidden="true"></i>
-				<h3>Responsive design</h3>
-				<p>Responsive development will help </br> make your website easily </br> accessible across all devices.</p>
-			</div>
-			<div id="thirdContent">
-				<i class="fa fa-camera-retro" aria-hidden="true"></i>
-				<h3>Newsletter design</h3>
-				<p>A matching newsletter is the </br> perfect way to complement your </br> website & keep in contact.</p>
-			</div>
+		<section id="servicesSection" class="jumbojet box-sizing">
+				<div class="serviceContent">
+					<i class="fa fa-magic" aria-hidden="true"></i>
+					<h3>Website design</h3>
+					<p>Each of my designs is custom made, carefully coded and has a user-centric design.</p>
+				</div>
+				<div class="serviceContent">
+					<i class="fa fa-cubes" aria-hidden="true"></i>
+					<h3>Responsive design</h3>
+					<p>Responsive design will make your website perform and look well on all devices.</p>
+				</div>
+				<div id="thirdContent">
+					<i class="fa fa-cogs" aria-hidden="true"></i>
+					<h3>SEO</h3>
+					<p>Search Engine Optimisation will help your website perform well in search engines.</p>
+				</div>
 		</section>
 
 		<section id="aboutSection">
-			<div id="photoContainer"> 
-				<img id="aboutImage" src="images/portrait.jpeg" />
-			</div>
-				
-			<div id="textContainer">
+			<div class="textContainer">
 				<h2>About me</h2>
-				<p>Cheesecake marzipan croissant jelly beans candy oat cake tootsie </br>  roll
-					wafer lemon drops. Marshmallow tiramisu tart dragée </br> cupcake. Chocolate cake
-					jelly-o bonbon pastry cake chocolate bar </br> bonbon jelly-o. Bonbon oat cake oat cake.
-					Biscuit topping cotton </br> candy chocolate bar pie tart gummi bears. Jelly tiramisu ice </br> 
-					marshmallow. Cotton candy jelly beans cake </br> dragée croissant fruitcake jelly beans.
+				<p>I am a design-oriented front-end developer based in Serbia, with <br/> 
+					experience in building responsive captivating websites and <br/> 
+					enabling exceptional user experience. <br/> 
+					Some of the languages I frequently find myself using include HTML5,<br/>  
+					CSS3 (SCSS) and JavaScript (jQuery). The graphic design tools<br/>
+					I use the most include Adobe Photoshop and Adobe Illustrator.
 				</p>
 			</div>
+				<img src="images/portrait.png" class="portraitImage"/>
 		</section>
 
 		<section id="projectsSection"> 
@@ -80,16 +78,18 @@
 				<p>Cheesecake marzipan croissant jelly beans candy oat cake tootsie roll
 				wafer lemon drops. Marshmallow tiramisu tart dragée cupcake croissant fruitcake. 
 				</p>
-				<button class="projectButton"><span>View project</span></button>
+				<button class="projectButton" id="button1" ><span>View site</span></button>
 			</div>
 			<div class="projectContent">
 				<div class="upperHalf" style="background-image: url('images/abstract2.jpg');">
 					<h3>Protokite</h3>
 				</div>
-                <p>Cheesecake marzipan croissant jelly beans candy oat cake tootsie roll
-                wafer lemon drops. Marshmallow tiramisu tart dragée cupcake croissant fruitcake. 
+                <p>Protokite is an open source code generator that can make a complete multi-layer system with generated stored procedures, DAL and BLL, based on the domain model 
+					in JSON format. <br/><br/> HTML5, CSS3, jQuery
 				</p>
-				<button class="projectButton"><span>View project</span></button>
+				<button class="projectButton" id="button2" target="_blank" onclick="window.open('http://www.protokite.tk', '_blank')" >
+					<span>View site</span>
+				</button>
 			</div>
 			<div class="projectContent">
 				<div class="upperHalf" style="background-image: url('images/abstract3.jpg');">
@@ -98,15 +98,17 @@
 				<p>Cheesecake marzipan croissant jelly beans candy oat cake tootsie roll
 				wafer lemon drops. Marshmallow tiramisu tart dragée cupcake croissant fruitcake. 
 				</p>
-				<button class="projectButton"><span>View project</span></button>
+				<button class="projectButton" id="button3"><span>View site</span></button>
 			</div>
 		</section>
 
 		<footer>
 			<h1>Get in touch</h1>
-			<p>If you have any questions or are interested in my work, </br>
-				contact me on ...
+			<p>If you have any questions or are interested in my work, <br/>
+				contact me on
 			</p>
+			<a target="_blank" href="https://www.linkedin.com/in/anabjelica/" ><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+			<a target="_blank" href="https://github.com/ondine701" ><i class="fa fa-github" aria-hidden="true"></i></a>			
 			<h4>© 2018 Ana Bjelica | All rights reserved.</h4>
 		</footer>		
 
