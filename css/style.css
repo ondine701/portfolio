@@ -25,7 +25,7 @@
 
 header{
 	height: 75px;
-    background-color: #6d3250;
+    background-color: #609b9a;
 }
 
 header > nav {
@@ -58,7 +58,7 @@ header > a {
 }
 
 header > a:hover {
-    color: #472335;
+    color: #375b5b;
     transition-duration: 0.3s;
     -moz-transition-duration: 0.3s;
     -o-transition-duration: 0.3s;
@@ -69,11 +69,11 @@ header > a:hover {
 
 /*#region Intro*/
 
-#introSection {
+.introSection {
     background-size: cover;
 }
 
-#introSection > p {
+.introSection > p {
     text-align: center;
     font-family: 'Raleway-Light';
     font-size: 30px;
@@ -84,28 +84,60 @@ header > a:hover {
     padding-bottom: 220px;
 }
 
+.fadeIn {
+	animation-name: fadeIn;
+	-webkit-animation-name: fadeIn;	
+
+	animation-duration: 1.5s;	
+	-webkit-animation-duration: 1.5s;
+
+	animation-timing-function: ease-in-out;	
+    -webkit-animation-timing-function: ease-in-out;	
+
+	visibility: visible !important;	
+}
+
+@keyframes fadeIn {
+	0% {
+		transform: scale(0);
+		opacity: 0.0;		
+	}
+	60% {
+		transform: scale(1.1);	
+	}
+	80% {
+		transform: scale(0.9);
+		opacity: 1;	
+	}	
+	100% {
+		transform: scale(1);
+		opacity: 1;	
+	}		
+}
+
 /*#endregion Intro*/
 
 /*#region Services*/
 
 #servicesSection {
-    background-color: #e5dce0;
+    background-color: #bfdfd0;
     padding: 60px 40px 60px 40px;
 }
 
 #servicesSection > .serviceContent {
     display: inline-block;
-    width: 29.5%;
-    color: #635e5e;
+    width: 29.8%;
+    color: #7a7676;
     text-align: center;
     font-family: 'Raleway-Light';
-    border-right: 1px solid #635e5e;
+    border-right: 1px solid #7a7676;
     padding: 0px 20px 0px 20px;
 }
 
 #servicesSection > .serviceContent > i {
     font-size: 45px;
     margin-bottom: 15px;
+    visibility: hidden;
 }
 
 #servicesSection > .serviceContent > h3 {
@@ -120,8 +152,8 @@ header > a:hover {
 
 #servicesSection > #thirdContent {
     display: inline-block;
-    width: 29.5%;
-    color: #635e5e;
+    width: 29.8%;
+    color: #7a7676;
     text-align: center;
     font-family: 'Raleway-Light';
     padding: 0px 20px 0px 20px;
@@ -130,6 +162,7 @@ header > a:hover {
 #servicesSection > #thirdContent > i {
     font-size: 45px;
     margin-bottom: 15px;
+    visibility: hidden;
 }
 
 #servicesSection > #thirdContent > h3 {
@@ -187,7 +220,7 @@ header > a:hover {
 /*#region Projects*/
 
 #projectsSection {
-    background-color: #e5dce0;
+    background-color: #abccc7;
     padding: 30px 50px 120px 50px;
 }
 
@@ -204,7 +237,7 @@ header > a:hover {
     font-size: 35px;
     text-align: center;
     text-transform: uppercase;
-    color: #635e5e;
+    color: #ffffff;
     letter-spacing: 1.5px;
     padding: 30px;
 }
@@ -218,16 +251,17 @@ header > a:hover {
 
 #projectsSection > .projectContent > .upperHalf {
     height: 43%;
-    background-size: 400px 350px;
+    background-size: 100%;
     transition-duration: 0.3s;
     -moz-transition-duration: 0.3s;
     -o-transition-duration: 0.3s;
     -webkit-transition-duration: 0.3s;
     background-position: center;
+    opacity: 0.8;
 }
 
 #projectsSection > .projectContent > .upperHalf:hover {
-    background-size: 500px 450px;
+    background-size: 110%;
 }
 
 #projectsSection > .projectContent > .upperHalf > h3 {
@@ -297,43 +331,67 @@ header > a:hover {
 /*#region Footer*/
 
 footer {
-    padding: 100px 40px 100px 40px;
-    background-color: #6d3250;
     text-align: center;
+    background-color: #2d2d2d;
+    position: absolute;
+    width: 100%;
+    height: auto;
 }
 
-footer > h1 {
+footer > .footerImageContainer {
+    display: block;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    position: absolute;
+}
+
+footer > .footerImageContainer > .footerImage {
+    width: 100%;
+    height: auto;
+}
+
+footer > .footerTextContainer {
+    position: relative;
+    width: 30%;
+    margin: 0 auto;
+    top: 170px;
+}
+
+footer > .footerTextContainer > h1 {
     font-family: 'Raleway-Light';
-    font-size: 45px;
+    font-size: 30px;
     color: #ffffff;
     letter-spacing: 1.5px;
 }
 
-footer > p {
+footer > .footerTextContainer > p {
     font-family: 'Raleway-Light';
-    font-size: 20px;
+    font-size: 17px;
     color: #ffffff;
     letter-spacing: 1.5px;
     margin-top: 35px;
-    margin-bottom: 45px;
+    margin-bottom: 20px;
 }
 
 footer > h4 {
     font-family: 'Raleway-Light';
-    font-size: 16px;
-    margin-top: 35px;
+    font-size: 14px;
+    padding-top: 300px;
+    padding-bottom: 50px;
     color: #ffffff;
     letter-spacing: 1.5px;
 }
 
-footer > a {
+footer > .footerTextContainer > a {
     color: #ffffff;
-    font-size: 35px;
+    font-size: 30px;
     padding: 10px;
 }
 
-footer > a:hover {
-    color: #472335;
+footer > .footerTextContainer > a:hover {
+    color: #1e1e1e;
     transition-duration: 0.3s;
     -moz-transition-duration: 0.3s;
     -o-transition-duration: 0.3s;
@@ -366,6 +424,10 @@ footer > a:hover {
         padding-right: 85px;
     }
     
+    #aboutSection > .textContainer > p {
+        padding-left: 0;
+    }
+
     #aboutSection > .portraitImage {
         display: block;
         margin: 0 auto;
@@ -394,8 +456,24 @@ footer > a:hover {
 }
 
 @media screen and (max-width: 900px){
-    #introSection > p {
+    .introSection > p {
         font-size: 25px;
+    }
+}
+
+@media screen and (max-width: 812px){
+
+    footer > .footerTextContainer > h1 {
+        font-size: 28px;
+    }
+
+    footer > .footerTextContainer > p {
+        font-size: 15px;
+        margin-bottom: 17px;
+    }
+
+    footer > .footerTextContainer > a {
+        font-size: 28px;
     }
 }
 
@@ -418,26 +496,26 @@ footer > a:hover {
     #servicesSection > .serviceContent > i {
         font-size: 40px;
     }
+
+    #servicesSection > #thirdContent > i {
+        font-size: 40px;
+    }
     
     #servicesSection > .serviceContent > h3 {
         font-size: 25px;
     }
     
-    #servicesSection > .serviceContent > p {
-        font-size: 16px;
-    }
-    
-    #servicesSection > #thirdContent > i {
-        font-size: 40px;
-    }
-    
     #servicesSection > #thirdContent > h3 {
         font-size: 25px;
     }
-    
+
+    #servicesSection > .serviceContent > p {
+        font-size: 16px;
+    } 
+
     #servicesSection > #thirdContent > p {
         font-size: 16px;
-    }    
+    } 
 
     #aboutSection > .portraitImage {
        max-width: 30%;
@@ -457,7 +535,7 @@ footer > a:hover {
 }
 
 @media screen and (max-width: 650px){
-    #introSection > p {
+    .introSection > p {
         font-size: 20px;
     }
 
@@ -465,19 +543,19 @@ footer > a:hover {
         display: none;
     }
 
-    footer > h1 {
+    footer >  .footerTextContainer > h1 {
         font-size: 40px;
     }
     
-    footer > p {
+    footer >  .footerTextContainer > p {
         font-size: 16px;
     }
     
-    footer > h4 {
+    footer >  .footerTextContainer > h4 {
         font-size: 13px;
     }
     
-    footer > a {
+    footer >  .footerTextContainer > a {
         font-size: 30px;
     }
 
@@ -486,30 +564,69 @@ footer > a:hover {
     }
 }
 
+@media screen and (max-width: 592px){
+
+    footer > .footerTextContainer > h1 {
+        font-size: 23px;
+    }
+
+    footer > .footerTextContainer > p {
+        font-size: 13px;
+        margin-bottom: 17px;
+        margin-top: 25px;
+    }
+
+    footer > .footerTextContainer > a {
+        font-size: 22px;
+    }
+}
+
 @media screen and (max-width: 550px){
-    footer > h1 {
-        font-size: 35px;
-    }
-    
-    footer > p {
-        font-size: 15px;
-    }
-    
-    footer > h4 {
-        font-size: 10px;
-    }
-    
-    footer > a {
-        font-size: 25px;
-    }
 
     #projectsSection > .projectContent {
         width: 85%;
     }
+
+    #aboutSection > .textContainer > h2 {
+        font-size: 25px;
+    }
+    
+    #aboutSection > .textContainer > p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px){
+
+    #projectsSection > #headlineStorage > h2 {
+        font-size: 28px;
+    }
+
+    footer > .footerImageContainer {
+        width: 250px;
+    }
+
+    footer > .footerTextContainer {
+        width: 45%;
+    }
+
+    footer > .footerTextContainer > h1 {
+        font-size: 20px;
+    }
+
+    footer > .footerTextContainer > p {
+        font-size: 12px;
+        margin-bottom: 17px;
+        margin-top: 25px;
+    }
+
+    footer > .footerTextContainer > a {
+        font-size: 18px;
+    }
 }
 
 @media screen and (max-width: 430px){
-    #introSection > p {
+    .introSection > p {
         font-size: 17px;
     }
 
@@ -520,23 +637,60 @@ footer > a:hover {
     #aboutSection > .portraitImage {
         max-width: 50%;
      }
- }
-}
 
-@media screen and (max-width: 340px){
-    footer > h1 {
-        font-size: 30px;
+     #aboutSection > .textContainer > h2 {
+        font-size: 20px;
     }
     
-    footer > p {
-        font-size: 13px;
+    #aboutSection > .textContainer > p {
+        font-size: 14px;
     }
 
-    footer > a {
-        font-size: 23px;
+     footer > h4 {
+        font-size: 12px;
+    }
+
+    #servicesSection > .serviceContent > i {
+        font-size: 30px;
+    }
+
+    #servicesSection > #thirdContent > i {
+        font-size: 30px;
+    } 
+    
+    #servicesSection > .serviceContent > h3 {
+        font-size: 20px;
+    }
+
+    #servicesSection > #thirdContent > h3 {
+        font-size: 20px;
+    } 
+    
+    #servicesSection > .serviceContent > p {
+        font-size: 14px;
+    }
+
+    #servicesSection > #thirdContent > p {
+        font-size: 14px;
+    }
+
+    #projectsSection > .projectContent > .upperHalf > h3 {
+        font-size: 20px;
+    }
+    
+    #projectsSection > .projectContent > p {
+        font-size: 14px;
     }
 }
 
+@media screen and (max-width: 370px){
 
+    #projectsSection > #headlineStorage {
+        margin: 0px 30px 150px 30px;
+    }
 
-
+    #projectsSection > #headlineStorage > h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+}
