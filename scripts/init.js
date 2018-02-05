@@ -1,6 +1,24 @@
 $(document).ready(function() {
+
+	this.message = 'Hi, I\'m Ana. I\'m a Front End Developer. Scroll down to see my work.';
+
+	var delay = 0;
+	for(var i = 0; i < this.message.length; i++){
+		var root = this;
+		setTimeout(function(j){
+			$('.dynamicMessage').append(root.message[j]);
+		}.bind(this, i), delay);
+
+		if(this.message[i] == ',')
+			delay += 200;
+		else if(this.message[i] == '.')
+			delay += 250;
+		else
+			delay += 120;
+	};
+
 	$('#aboutLink').on('click', function() {
-		$("html, body").animate({ scrollTop: $('#textContainer').offset().top }, 1000);
+		$("html, body").animate({ scrollTop: $('#aboutSection').offset().top }, 1000);
 	});
 	
 	$('#projectsLink').on('click', function() {

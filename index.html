@@ -20,7 +20,6 @@
 	<body>
 		<header>
 			<nav>
-				<a href="javascript:;" id="homeLink">Home</a>
 				<a href="javascript:;" id="aboutLink">About</a>
 				<a href="javascript:;" id="projectsLink">Projects</a>
 				<a href="javascript:;" id="contactLink">Contact</a>
@@ -29,10 +28,11 @@
 			<a class="animated" target="_blank" href="https://www.linkedin.com/in/anabjelica/" ><i class="fa fa-linkedin" aria-hidden="true"></i></a>
 		</header>
 		
-		<section class="introSection animate" style="background-image: url('images/backgroundPhoto.jpeg');">
-			<p>Hi, I am Ana. I am a Front End Developer <br/> focusing on
-				Web Development <br/> and Rensponsive Web Design.
-			</p>
+		<section class="introSection">
+			<video autoplay muted loop>
+				<source src="videos/backgroundVideo.mp4" type="video/mp4">					
+			</video>
+			<p class="dynamicMessage"></p>
 		</section>
 
 		<section id="servicesSection" class="jumbojet box-sizing">
@@ -64,7 +64,10 @@
 					I use the most include Adobe Photoshop and Adobe Illustrator.
 				</p>
 			</div>
+			<div class="imageContainer">
 				<img src="images/portrait.png" class="portraitImage"/>
+			</div>
+			<div style="clear:both"></div>
 		</section>
 
 		<section id="projectsSection"> 

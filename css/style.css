@@ -21,11 +21,20 @@
 	padding: 0;
 }
 
+html, body{
+    height: 100%;
+}
+
 /*#region Header*/
 
 header{
 	height: 75px;
-    background-color: #609b9a;
+    z-index: 500;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    border-bottom: solid rgba(255, 255, 255, 0.6) 1px;
 }
 
 header > nav {
@@ -38,6 +47,7 @@ header > nav > a {
     float: left;
     font-family: 'Raleway-Light';
     font-size: 13px;
+    font-weight: bolder;
     text-decoration: none;
     color: #ffffff;
     margin: 29px 14px 0px 16px;
@@ -58,7 +68,7 @@ header > a {
 }
 
 header > a:hover {
-    color: #375b5b;
+    color: #b59292;
     transition-duration: 0.3s;
     -moz-transition-duration: 0.3s;
     -o-transition-duration: 0.3s;
@@ -70,18 +80,30 @@ header > a:hover {
 /*#region Intro*/
 
 .introSection {
-    background-size: cover;
+    height: 100%;
+}
+
+.introSection > video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 .introSection > p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
     text-align: center;
     font-family: 'Raleway-Light';
     font-size: 30px;
     font-weight: 900;
     color: #ffffff;
-    padding-top: 250px;
     letter-spacing: 1.5px;
-    padding-bottom: 220px;
+    width: 400px;
 }
 
 .fadeIn {
@@ -120,13 +142,13 @@ header > a:hover {
 /*#region Services*/
 
 #servicesSection {
-    background-color: #bfdfd0;
-    padding: 60px 40px 60px 40px;
+    background-color: #f9f9f9;
+    padding: 100px 40px 100px 40px;
 }
 
 #servicesSection > .serviceContent {
-    display: inline-block;
-    width: 29.8%;
+    float: left;
+    width: 30%;
     color: #7a7676;
     text-align: center;
     font-family: 'Raleway-Light';
@@ -152,7 +174,7 @@ header > a:hover {
 
 #servicesSection > #thirdContent {
     display: inline-block;
-    width: 29.8%;
+    width: 30%;
     color: #7a7676;
     text-align: center;
     font-family: 'Raleway-Light';
@@ -180,21 +202,21 @@ header > a:hover {
 /*#region About*/
 
 #aboutSection {
-    padding: 30px;
+    padding: 70px 30px 70px 30px;
     background-size: cover;
 }
 
 #aboutSection > .textContainer {
-    height: 100%;
     float: left;
     padding-top: 30px;
-    padding-bottom: 60px;
+    padding-bottom: 40px;
+    width: 60%;
 }
 
 #aboutSection > .textContainer > h2 {
     text-align: center;
     font-family: 'Raleway-Light';
-    color: #635e5e;
+    color: #7a7676;
     font-size: 30px;
     padding-bottom: 40px;
     text-transform: uppercase;
@@ -205,14 +227,17 @@ header > a:hover {
     font-size: 18px;
     text-align: center;
     letter-spacing: 1px;
-    color: #635e5e;
+    color: #7a7676;
     line-height: 26px;
-    padding-left: 30px;
 }
 
-#aboutSection > .portraitImage {
-    max-width: 23%;
-    padding-left: 150px;
+#aboutSection > .imageContainer {
+    width: 25%;
+    float: right;
+}
+
+#aboutSection > .imageContainer > .portraitImage {
+    max-width: 100%;
 }
 
 /*#endregion About*/
@@ -220,7 +245,7 @@ header > a:hover {
 /*#region Projects*/
 
 #projectsSection {
-    background-color: #abccc7;
+    background-color: #f9f9f9;
     padding: 30px 50px 120px 50px;
 }
 
@@ -228,8 +253,8 @@ header > a:hover {
     position: relative;
     top: 60px;
     margin: 0px 120px 150px 120px;
-    border-top: 2px solid #ffffff;
-    border-bottom: 2px solid #ffffff;
+    border-top: 2px solid #d3d3d3;
+    border-bottom: 2px solid #d3d3d3;
 }
 
 #projectsSection > #headlineStorage > h2 {
@@ -237,7 +262,7 @@ header > a:hover {
     font-size: 35px;
     text-align: center;
     text-transform: uppercase;
-    color: #ffffff;
+    color: #878383;
     letter-spacing: 1.5px;
     padding: 30px;
 }
@@ -252,6 +277,7 @@ header > a:hover {
 #projectsSection > .projectContent > .upperHalf {
     height: 43%;
     background-size: 100%;
+    background-repeat: no-repeat;
     transition-duration: 0.3s;
     -moz-transition-duration: 0.3s;
     -o-transition-duration: 0.3s;
@@ -269,8 +295,8 @@ header > a:hover {
     font-size: 25px;
     text-align: center;
     text-transform: uppercase;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 75px;
+    padding-bottom: 75px;
     color: #ffffff;
 }
 
@@ -288,7 +314,6 @@ header > a:hover {
     font-size: 17px;
     font-weight: 600;
     letter-spacing: 1.5px;
-    border-radius: 5px;
     border: #f4b858;
     color: #ffffff;
     display: block;
@@ -350,6 +375,7 @@ footer > .footerImageContainer {
 footer > .footerImageContainer > .footerImage {
     width: 100%;
     height: auto;
+    opacity: 0.6;
 }
 
 footer > .footerTextContainer {
@@ -368,7 +394,7 @@ footer > .footerTextContainer > h1 {
 
 footer > .footerTextContainer > p {
     font-family: 'Raleway-Light';
-    font-size: 17px;
+    font-size: 15px;
     color: #ffffff;
     letter-spacing: 1.5px;
     margin-top: 35px;
@@ -400,15 +426,15 @@ footer > .footerTextContainer > a:hover {
 
 /*#endregion Footer*/
 
-@media screen and (max-width: 1228px){  
+@media screen and (max-width: 1316px){  
     #servicesSection > #thirdContent {
         display: block;
         margin: 0 auto;
-        padding-top: 50px;
+        margin-top: 190px;
     }
 
     #servicesSection > .serviceContent {
-        width: 45%;
+        width: 46%;
     }
 
     #servicesSection > .serviceContent:nth-child(2) {
@@ -416,22 +442,32 @@ footer > .footerTextContainer > a:hover {
     } 
 }
 
-@media screen and (max-width: 1133px){
+@media screen and (max-width: 1210px){
     #aboutSection > .textContainer {
-        width: 100%;
-        display: block;
-        margin: auto;
-        padding-right: 85px;
-    }
-    
-    #aboutSection > .textContainer > p {
-        padding-left: 0;
-    }
-
-    #aboutSection > .portraitImage {
+        float: none;
         display: block;
         margin: 0 auto;
-        padding: 0;
+        width: 90%;
+    }
+    
+    #aboutSection > .imageContainer {
+        float: none;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 1150px){  
+    .introSection > video {
+        height: 100%;
+        width: auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+@media screen and (max-width: 1110px){  
+    #servicesSection > .serviceContent {
+        width: 45%;
     }
 }
 
@@ -449,10 +485,49 @@ footer > .footerTextContainer > a:hover {
     }
 }
 
-@media screen and (max-width: 947px){  
+@media screen and (max-width: 906px){ 
+
     #servicesSection > .serviceContent {
-        width: 44%;
+        float: none;
+        display: block;
+        margin: 0 auto;
+        border: none;
+        width: 100%;
     }
+
+    #servicesSection > #thirdContent {
+        width: 100%;
+        float: none;
+        margin-top: 50px;
+    }
+
+    #servicesSection > .serviceContent:nth-child(2) {
+    margin-top: 50px;
+    }
+
+    #servicesSection > .serviceContent > i {
+        font-size: 40px;
+    }
+
+    #servicesSection > #thirdContent > i {
+        font-size: 40px;
+    }
+
+    #servicesSection > .serviceContent > h3 {
+        font-size: 25px;
+    }
+
+    #servicesSection > #thirdContent > h3 {
+        font-size: 25px;
+    }
+
+    #servicesSection > .serviceContent > p {
+        font-size: 16px;
+    } 
+
+    #servicesSection > #thirdContent > p {
+        font-size: 16px;
+    } 
 }
 
 @media screen and (max-width: 900px){
@@ -462,7 +537,6 @@ footer > .footerTextContainer > a:hover {
 }
 
 @media screen and (max-width: 812px){
-
     footer > .footerTextContainer > h1 {
         font-size: 28px;
     }
@@ -478,47 +552,12 @@ footer > .footerTextContainer > a:hover {
 }
 
 @media screen and (max-width: 805px){
-    #servicesSection > .serviceContent {
-        display: block;
-        margin: 0 auto;
-        border: none;
-        width: 100%;
-    }
-
-    #servicesSection > #thirdContent {
-        width: 100%;
-    }
-
-    #servicesSection > .serviceContent:nth-child(2) {
-    margin-top: 50px;
-    }
-
-    #servicesSection > .serviceContent > i {
-        font-size: 40px;
-    }
-
-    #servicesSection > #thirdContent > i {
-        font-size: 40px;
-    }
-    
-    #servicesSection > .serviceContent > h3 {
+    #aboutSection > .textContainer > h2 {
         font-size: 25px;
     }
     
-    #servicesSection > #thirdContent > h3 {
-        font-size: 25px;
-    }
-
-    #servicesSection > .serviceContent > p {
+    #aboutSection > .textContainer > p {
         font-size: 16px;
-    } 
-
-    #servicesSection > #thirdContent > p {
-        font-size: 16px;
-    } 
-
-    #aboutSection > .portraitImage {
-       max-width: 30%;
     }
 }
 
@@ -534,6 +573,12 @@ footer > .footerTextContainer > a:hover {
     }
 }
 
+@media screen and (max-width: 700px){
+    #aboutSection > .imageContainer {
+        width: 40%;
+    }
+}
+
 @media screen and (max-width: 650px){
     .introSection > p {
         font-size: 20px;
@@ -543,29 +588,12 @@ footer > .footerTextContainer > a:hover {
         display: none;
     }
 
-    footer >  .footerTextContainer > h1 {
-        font-size: 40px;
-    }
-    
-    footer >  .footerTextContainer > p {
-        font-size: 16px;
-    }
-    
-    footer >  .footerTextContainer > h4 {
-        font-size: 13px;
-    }
-    
-    footer >  .footerTextContainer > a {
-        font-size: 30px;
-    }
-
     #projectsSection > #headlineStorage {
         margin: 0px 60px 150px 60px;
     }
 }
 
 @media screen and (max-width: 592px){
-
     footer > .footerTextContainer > h1 {
         font-size: 23px;
     }
@@ -582,22 +610,12 @@ footer > .footerTextContainer > a:hover {
 }
 
 @media screen and (max-width: 550px){
-
     #projectsSection > .projectContent {
         width: 85%;
-    }
-
-    #aboutSection > .textContainer > h2 {
-        font-size: 25px;
-    }
-    
-    #aboutSection > .textContainer > p {
-        font-size: 16px;
     }
 }
 
 @media screen and (max-width: 480px){
-
     #projectsSection > #headlineStorage > h2 {
         font-size: 28px;
     }
@@ -634,18 +652,6 @@ footer > .footerTextContainer > a:hover {
         padding: 30px 10px 120px 10px;
     }
 
-    #aboutSection > .portraitImage {
-        max-width: 50%;
-     }
-
-     #aboutSection > .textContainer > h2 {
-        font-size: 20px;
-    }
-    
-    #aboutSection > .textContainer > p {
-        font-size: 14px;
-    }
-
      footer > h4 {
         font-size: 12px;
     }
@@ -680,6 +686,18 @@ footer > .footerTextContainer > a:hover {
     
     #projectsSection > .projectContent > p {
         font-size: 14px;
+    }
+
+    #aboutSection > .textContainer > h2 {
+        font-size: 20px;
+    }
+    
+    #aboutSection > .textContainer > p {
+        font-size: 14px;
+    }
+
+    #aboutSection > .imageContainer {
+        width: 55%;
     }
 }
 
