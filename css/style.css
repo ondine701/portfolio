@@ -49,6 +49,7 @@ header > nav {
 }
 
 header > nav > a {
+	position: relative;
     float: left;
     font-family: 'Raleway-Regular';
     font-size: 13px;
@@ -60,6 +61,32 @@ header > nav > a {
     text-transform: uppercase;
     letter-spacing: 3px;
     padding: 3px;
+	padding-bottom: 8px;
+}
+
+header > nav > a::after {
+	height: 1px;
+	position: absolute;
+	content: ' ';
+	width: 0;
+	background-color: #ffffff;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	opacity: 0;
+	-webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+header nav > a:hover{
+	opacity: 1;
+}
+
+header > nav > a:hover::after {
+	width: 100%;
+	opacity: 0.6;
 }
 
 header > a {
@@ -295,15 +322,21 @@ header > a:hover {
     padding: 30px;
 }
 
-#projectsSection > .projectContent {
-    width: 30%;
-    background-color: #ffffff;
-    display: inline-block;
-    margin-left: 30px;
-	vertical-align: top;
+#projectsSection > .projectContentContainer{
+	display: flex;
 }
 
-#projectsSection > .projectContent > .upperHalf {
+#projectsSection .projectContent {
+	display: inline-block;
+    width:  28%;
+	height: 100%;
+    background-color: #ffffff;
+	vertical-align: top;
+	margin: 0 auto;
+}
+
+#projectsSection .projectContent > .upperHalf {
+	position: relative;
     height: 170px;
     background-size: 100%;
     background-repeat: no-repeat;
@@ -315,20 +348,24 @@ header > a:hover {
     opacity: 0.85;
 }
 
-#projectsSection > .projectContent > .upperHalf:hover {
+#projectsSection .projectContent > .upperHalf:hover {
     background-size: 110%;
 }
 
-#projectsSection > .projectContent > .upperHalf > h3 {
-    font-family: 'Raleway-Light';
+#projectsSection .projectContent > .upperHalf > h3 {
+	position: absolute;
+	font-family: 'Raleway-Light';
     font-size: 25px;
     text-align: center;
     text-transform: uppercase;
-    padding: 75px 7px 75px 7px;
+    padding: 0 10px 0 10px;
     color: #ffffff;
+	width: calc(100% - 20px);
+	top: 50%;
+	transform: translateY(-50%);
 }
 
-#projectsSection > .projectContent > p {
+#projectsSection .projectContent > p {
     font-family: 'Raleway-Light';
     font-size: 18px;
     text-align: center;
@@ -339,20 +376,20 @@ header > a:hover {
 }
 
 .projectButton {
+	display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 80%;
+    height: 50px;
     font-family: 'Raleway-Light';
     font-size: 17px;
     font-weight: 600;
     letter-spacing: 1.5px;
     border: #f4b858;
     color: #ffffff;
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 30px;
-    width: 210px;
-    height: 50px;
     background-color: #7c7575;
     transition: all 0.5s;
-    cursor: pointer;
+    cursor: pointer;	
 }
 
 .projectButton span {
@@ -501,19 +538,7 @@ footer > .footerTextContainer > a:hover {
     }
 }
 
-@media screen and (max-width: 1096px){ 
-    #projectsSection > .projectContent {
-        width: 45%;
-        padding-bottom: 1px;
-    }
 
-    #projectsSection > .projectContent:nth-child(4) {
-        display: block;
-        margin: 0 auto;
-        margin-top: 70px;
-        padding-bottom: 1px;
-    }
-}
 
 @media screen and (max-width: 906px){ 
 
@@ -592,15 +617,16 @@ footer > .footerTextContainer > a:hover {
 }
 
 @media screen and (max-width: 756px){
-    #projectsSection > .projectContent {
+    #projectsSection .projectContent {
         display: block;
         width: 70%;
         margin: 0 auto;
+		margin-bottom: 50px;
     }
-
-    #projectsSection > .projectContent:nth-child(3) {
-        margin-top: 70px;
-    }
+	
+	#projectsSection > .projectContentContainer{
+	display: block;
+	}
 }
 
 @media screen and (max-width: 700px){
@@ -640,7 +666,7 @@ footer > .footerTextContainer > a:hover {
 }
 
 @media screen and (max-width: 550px){
-    #projectsSection > .projectContent {
+    #projectsSection .projectContent {
         width: 85%;
     }
 }
@@ -678,10 +704,6 @@ footer > .footerTextContainer > a:hover {
         font-size: 17px;
     }
 
-    #projectsSection {
-        padding: 30px 10px 120px 10px;
-    }
-
      footer > h4 {
         font-size: 12px;
     }
@@ -709,12 +731,16 @@ footer > .footerTextContainer > a:hover {
     #servicesSection > #thirdContent > p {
         font-size: 14px;
     }
-
-    #projectsSection > .projectContent > .upperHalf > h3 {
+	
+    #projectsSection {
+        padding: 30px 10px 80px 10px;
+    }
+	
+    #projectsSection .projectContent > .upperHalf > h3 {
         font-size: 20px;
     }
     
-    #projectsSection > .projectContent > p {
+    #projectsSection .projectContent > p {
         font-size: 14px;
     }
 

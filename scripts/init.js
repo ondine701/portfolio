@@ -32,20 +32,7 @@ $(document).ready(function() {
 	$('#arrow').on('click', function() {
 		$("html, body").animate({ scrollTop: $('#servicesSection').offset().top }, 1000);
 	});
-
-
 	
-	$('#button1').on('click', function() {
-		window.open='http://www.protokite.tk';
-	});
-
-	$('#button2').on('click', function() {
-		window.open='http://www.voca-api.tk';
-	});
-
-	$('#button3').on('click', function() {
-		
-	});
 
 	$(window).scroll(function() {
 		$('#magicIcon').each(function(){
