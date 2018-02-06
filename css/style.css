@@ -85,7 +85,13 @@ header > a:hover {
 /*#region Intro*/
 
 .introSection {
+	position: relative;
     height: 100%;
+	overflow: hidden;
+	-moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .introSection > video {
@@ -138,7 +144,7 @@ header > a:hover {
     text-align: center;
     font-family: 'Raleway-Light';
     border-right: 1px solid #7a7676;
-    padding: 0px 20px 0px 20px;
+    padding: 30px 20px 30px 20px;
 }
 
 #servicesSection > .serviceContent > i {
@@ -153,8 +159,11 @@ header > a:hover {
 }
 
 #servicesSection > .serviceContent > p {
+	display: block;
+	margin: 0 auto;
     font-size: 18px;
     letter-spacing: 2px;
+	width: 80%;
 }
 
 #servicesSection > #thirdContent {
@@ -163,7 +172,7 @@ header > a:hover {
     color: #7a7676;
     text-align: center;
     font-family: 'Raleway-Light';
-    padding: 0px 20px 0px 20px;
+    padding: 30px 20px 30px 20px;
 }
 
 #servicesSection > #thirdContent > i {
@@ -178,8 +187,11 @@ header > a:hover {
 }
 
 #servicesSection > #thirdContent > p {
+	display: block;
+	margin: 0 auto;
     font-size: 18px;
     letter-spacing: 2px;
+	width: 80%;
 }
 
 .fadeIn {
@@ -288,6 +300,7 @@ header > a:hover {
     background-color: #ffffff;
     display: inline-block;
     margin-left: 30px;
+	vertical-align: top;
 }
 
 #projectsSection > .projectContent > .upperHalf {
@@ -299,7 +312,7 @@ header > a:hover {
     -o-transition-duration: 0.3s;
     -webkit-transition-duration: 0.3s;
     background-position: center;
-    opacity: 0.7;
+    opacity: 0.85;
 }
 
 #projectsSection > .projectContent > .upperHalf:hover {
@@ -322,6 +335,7 @@ header > a:hover {
     margin-top: 25px;
     padding: 10px 15px 25px 15px;
     color: #635e5e;
+	min-height: 100px;
 }
 
 .projectButton {
