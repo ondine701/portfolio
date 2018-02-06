@@ -10,11 +10,11 @@ $(document).ready(function() {
 		}.bind(this, i), delay);
 
 		if(this.message[i] == ',')
-			delay += 200;
+			delay += 150;
 		else if(this.message[i] == '.')
-			delay += 250;
+			delay += 200;
 		else
-			delay += 120;
+			delay += 70;
 	};
 
 	$('#aboutLink').on('click', function() {
@@ -27,6 +27,10 @@ $(document).ready(function() {
 	
 	$('#contactLink').on('click', function() {
 		$("html, body").animate({ scrollTop: $('footer').offset().top }, 1000);
+	});
+
+	$('#arrow').on('click', function() {
+		$("html, body").animate({ scrollTop: $('#servicesSection').offset().top }, 1000);
 	});
 
 
