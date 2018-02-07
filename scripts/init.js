@@ -15,7 +15,7 @@ $(document).ready(function() {
 			delay += 200;
 		else
 			delay += 70;
-	};
+};
 
 	$('#aboutLink').on('click', function() {
 		$("html, body").animate({ scrollTop: $('#aboutSection').offset().top }, 1000);
@@ -40,11 +40,11 @@ $(document).ready(function() {
 	});
 
 	$('#button2').on('click', function() {
-		$("html, body").animate({ scrollTop: $('#textContainer').offset().top }, 1000);
+		window.open='http://www.voca-api.tk';
 	});
 
 	$('#button3').on('click', function() {
-		$("html, body").animate({ scrollTop: $('#textContainer').offset().top }, 1000);
+		
 	});
 
 	$(window).scroll(function() {

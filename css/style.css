@@ -122,6 +122,66 @@ header > a:hover {
     cursor: pointer;
 }
 
+/*#endregion Intro*/
+
+/*#region Services*/
+
+#servicesSection {
+    background-color: #f9f9f9;
+    padding: 100px 40px 100px 40px;
+}
+
+#servicesSection > .serviceContent {
+    float: left;
+    width: 30%;
+    color: #7a7676;
+    text-align: center;
+    font-family: 'Raleway-Light';
+    border-right: 1px solid #7a7676;
+    padding: 0px 20px 0px 20px;
+}
+
+#servicesSection > .serviceContent > i {
+    font-size: 45px;
+    margin-bottom: 15px;
+    visibility: hidden;
+}
+
+#servicesSection > .serviceContent > h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+#servicesSection > .serviceContent > p {
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+#servicesSection > #thirdContent {
+    display: inline-block;
+    width: 30%;
+    color: #7a7676;
+    text-align: center;
+    font-family: 'Raleway-Light';
+    padding: 0px 20px 0px 20px;
+}
+
+#servicesSection > #thirdContent > i {
+    font-size: 45px;
+    margin-bottom: 15px;
+    visibility: hidden;
+}
+
+#servicesSection > #thirdContent > h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+#servicesSection > #thirdContent > p {
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
 .fadeIn {
 	animation-name: fadeIn;
 	-webkit-animation-name: fadeIn;	
@@ -151,66 +211,6 @@ header > a:hover {
 		transform: scale(1);
 		opacity: 1;	
 	}		
-}
-
-/*#endregion Intro*/
-
-/*#region Services*/
-
-#servicesSection {
-    background-color: #f9f9f9;
-    padding: 100px 40px 100px 40px;
-}
-
-#servicesSection > .serviceContent {
-    float: left;
-    width: 30%;
-    color: #7a7676;
-    text-align: center;
-    font-family: 'Raleway-Light';
-    border-right: 1px solid #7a7676;
-    padding: 0px 20px 0px 20px;
-}
-
-#servicesSection > .serviceContent > i {
-    font-size: 45px;
-    margin-bottom: 15px;
-    visibility: hidden;
-}
-
-#servicesSection > .serviceContent > h3 {
-    font-size: 30px;
-    margin-bottom: 15px;
-}
-
-#servicesSection > .serviceContent > p {
-    font-size: 18px;
-    letter-spacing: 2px;
-}
-
-#servicesSection > #thirdContent {
-    display: inline-block;
-    width: 30%;
-    color: #7a7676;
-    text-align: center;
-    font-family: 'Raleway-Light';
-    padding: 0px 20px 0px 20px;
-}
-
-#servicesSection > #thirdContent > i {
-    font-size: 45px;
-    margin-bottom: 15px;
-    visibility: hidden;
-}
-
-#servicesSection > #thirdContent > h3 {
-    font-size: 30px;
-    margin-bottom: 15px;
-}
-
-#servicesSection > #thirdContent > p {
-    font-size: 18px;
-    letter-spacing: 2px;
 }
 
 /*#endregion Services*/
@@ -275,7 +275,7 @@ header > a:hover {
 
 #projectsSection > #headlineStorage > h2 {
     font-family: 'Raleway-Light';
-    font-size: 35px;
+    font-size: 30px;
     text-align: center;
     text-transform: uppercase;
     color: #878383;
@@ -291,7 +291,7 @@ header > a:hover {
 }
 
 #projectsSection > .projectContent > .upperHalf {
-    height: 43%;
+    height: 170px;
     background-size: 100%;
     background-repeat: no-repeat;
     transition-duration: 0.3s;
@@ -299,7 +299,7 @@ header > a:hover {
     -o-transition-duration: 0.3s;
     -webkit-transition-duration: 0.3s;
     background-position: center;
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
 #projectsSection > .projectContent > .upperHalf:hover {
@@ -311,8 +311,7 @@ header > a:hover {
     font-size: 25px;
     text-align: center;
     text-transform: uppercase;
-    padding-top: 75px;
-    padding-bottom: 75px;
+    padding: 75px 7px 75px 7px;
     color: #ffffff;
 }
 
@@ -420,8 +419,7 @@ footer > .footerTextContainer > p {
 footer > h4 {
     font-family: 'Raleway-Light';
     font-size: 14px;
-    padding-top: 300px;
-    padding-bottom: 50px;
+    padding: 300px 15px 50px 15px;
     color: #ffffff;
     letter-spacing: 1.5px;
 }
@@ -510,13 +508,13 @@ footer > .footerTextContainer > a:hover {
         display: block;
         margin: 0 auto;
         border: none;
-        width: 100%;
+        width: 70%;
     }
 
     #servicesSection > #thirdContent {
-        width: 100%;
         float: none;
         margin-top: 50px;
+        width: 70%;
     }
 
     #servicesSection > .serviceContent:nth-child(2) {
