@@ -323,21 +323,21 @@ header > a:hover {
 }
 
 #projectsSection > .projectContentContainer{
-	display: flex;
+    display: flex;
 }
 
 #projectsSection .projectContent {
-	display: inline-block;
+    display: inline-block;
     width:  28%;
 	height: 100%;
     background-color: #ffffff;
 	vertical-align: top;
-	margin: 0 auto;
+    margin-right: 10px;
 }
 
 #projectsSection .projectContent > .upperHalf {
 	position: relative;
-    height: 170px;
+    height: 160px;
     background-size: 100%;
     background-repeat: no-repeat;
     transition-duration: 0.3s;
@@ -390,6 +390,10 @@ header > a:hover {
     background-color: #7c7575;
     transition: all 0.5s;
     cursor: pointer;	
+}
+
+.projectButton:focus {
+	outline: none;
 }
 
 .projectButton span {
@@ -491,11 +495,18 @@ footer > .footerTextContainer > a:hover {
 
 /*#endregion Footer*/
 
+@media screen and (min-width: 1370px){
+    #aboutSection > .imageContainer {
+        width: 20%;
+        margin-right: 70px;
+    }
+}
+
 @media screen and (max-width: 1316px){  
     #servicesSection > #thirdContent {
         display: block;
         margin: 0 auto;
-        margin-top: 190px;
+        margin-top: 250px;
     }
 
     #servicesSection > .serviceContent {
@@ -538,10 +549,24 @@ footer > .footerTextContainer > a:hover {
     }
 }
 
-
+@media screen and (max-width: 1030px){
+    #projectsSection .projectContent {
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+		margin-bottom: 50px;
+    }
+	
+	#projectsSection > .projectContentContainer{
+	display: block;
+    }
+    
+    #projectsSection .projectContent > .upperHalf {
+        height: 200px;
+    }
+}
 
 @media screen and (max-width: 906px){ 
-
     #servicesSection > .serviceContent {
         float: none;
         display: block;
@@ -618,15 +643,14 @@ footer > .footerTextContainer > a:hover {
 
 @media screen and (max-width: 756px){
     #projectsSection .projectContent {
-        display: block;
         width: 70%;
-        margin: 0 auto;
-		margin-bottom: 50px;
     }
-	
-	#projectsSection > .projectContentContainer{
-	display: block;
-	}
+}
+
+@media screen and (max-width: 714px){
+    #projectsSection > #headlineStorage {
+        margin: 0px 60px 150px 60px;
+    }
 }
 
 @media screen and (max-width: 700px){
@@ -642,10 +666,6 @@ footer > .footerTextContainer > a:hover {
 
     header > nav {
         display: none;
-    }
-
-    #projectsSection > #headlineStorage {
-        margin: 0px 60px 150px 60px;
     }
 }
 
@@ -697,6 +717,10 @@ footer > .footerTextContainer > a:hover {
     footer > .footerTextContainer > a {
         font-size: 18px;
     }
+
+    #projectsSection .projectContent > .upperHalf {
+        height: 180px;
+    }
 }
 
 @media screen and (max-width: 430px){
@@ -742,6 +766,10 @@ footer > .footerTextContainer > a:hover {
     
     #projectsSection .projectContent > p {
         font-size: 14px;
+    }
+
+    #projectsSection .projectContent > .upperHalf {
+        height: 170px;
     }
 
     #aboutSection > .textContainer > h2 {
